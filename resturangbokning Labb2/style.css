@@ -1,0 +1,83 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+h1{
+    text-align: center;
+}
+
+.patio{
+    width: 15%;
+   
+}
+.patio .list-group-item{
+    height: 80px;
+    margin-bottom: 5%;
+}
+
+.resturant-center{
+    display: flex;
+    flex-direction: row;
+    text-align: right;
+    margin-left: 20%;
+    margin-top: -200px;
+    margin-bottom: 30px;
+}
+.resturant-center .list-group-item{
+    height: 80px;
+    margin-left: 1%;
+}
+.resturant-center .list-group-item span{
+    margin-left: 10px  ;
+}
+
+.resturant-wall{
+    display: flex;
+    flex-direction: row;
+    text-align: right;
+    margin-left: 15%;
+}
+
+.resturant-wall .list-group-item{
+    height: 80px;
+    margin-left: 1%;
+}
+.resturant-wall .list-group-item span{
+    margin-left: 10px  ;
+}
+
+.resturant-right-wall{
+    margin-left: 80%;
+    margin-top: -550px;
+}
+.resturant-right-wall .list-group-item{
+    height: 80px;
+    margin-bottom: 5%;
+}
+.ko-form{
+    margin-left: 80%;
+    padding-right: 30px;
+    margin-top: 50px;
+    margin-bottom: 200px;
+}
+.ko-form .btn{
+    margin-top: 20px;
+}
+.ko-form .guestLI{
+    text-align: center;
+    margin-top: 10px;
+    padding: 5% 0% 5% 0%;
+    font-weight: 600;
+    color: black;
+    background-color: lightgrey;
+   
+}
+
+
+
+.white-text{
+    color: white;
+}

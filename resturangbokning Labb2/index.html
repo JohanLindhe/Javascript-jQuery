@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Boka bord</title>
+
+  <script>
+
+var queueList = [];
+
+    $(document).ready(function(){
+      
+        $("li").click(function(e) {
+    if ($(e.target).hasClass("bg-success")) {
+    $(e.target).removeClass("bg-success");
+    $(e.target).addClass("bg-danger");
+  $(this).find(".p").text("Bokad");
+
+
+
+  
+  } else if ($(e.target).hasClass("bg-danger")) {
+    $(e.target).removeClass("bg-danger");
+    $(e.target).addClass("bg-success");
+    $(this).find(".p").css("color", "white");
+     $(this).find(".p").text("Ledigt");
+
+  }
+});
+
+
+
+  $("#addBtn").click(function() {
+      
+    var name = $('#name').val();
+    var table = $('#bord').val();
+  
+    var li = $('<li>').addClass('list-group-item guestLI').text(name + ' - Personer: ' + table);
+    $('#ko').append(li);
+
+
+$('#name').val('');
+$('#bord').val('');
+
+      li.click(function() {
+    $(this).remove();
+  });
+    
+  });
+
+
+
+    });
+  
+  </script>
+</head>
+<body>
+    
+
+
+    <main>
+        
+
+        <h1>Bokningssystem</h1>
+
+                    <ul class="list-group patio">
+                        <li class="list-group-item d-flex justify-content-between align-items-center rounded-pill bg-success white-text">
+                          Bord 1 <span class="p">Ledigt</span>
+                        <span class="badge bg-primary">4 platser</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center rounded-pill bg-success white-text">
+                          Bord 2 <span class="p">Ledigt</span>
+                          <span class="badge bg-primary">4 platser</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center rounded-pill bg-success white-text">
+                            Bord 3 <span class="p">Ledigt</span>
+                          <span class="badge bg-primary">4 platser</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center rounded-pill bg-success white-text">
+                          Bord 4 <span class="p">Ledigt</span>
+                        <span class="badge bg-primary">4 platser</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center rounded-pill bg-success white-text">
+                          Bord 5 <span class="p">Ledigt</span>
+                        <span class="badge bg-primary">4 platser</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center rounded-pill bg-success white-text">
+                          Bord 6 <span class="p">Ledigt</span>
+                        <span class="badge bg-primary">4 platser</span>
+                        </li>
+                      </ul>
+
+
+                      <ul class="list-group resturant-center">
+                        <li class="list-group-item d-flex justify-content-between align-items-center bg-success white-text">
+                          Bord 11 <span class="p">Ledigt</span>
+                        <span class="badge bg-primary">2 platser</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center bg-success white-text">
+                          Bord 12 <span class="p">Ledigt</span>
+                          <span class="badge bg-primary">2 platser</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center rounded-pill bg-success white-text">
+                            Bord 13 <span class="p">Ledigt</span>
+                          <span class="badge bg-primary">6 platser</span>
+                        
+                      </ul>
+
+                      <ul class="list-group resturant-wall">
+                        <li class="list-group-item d-flex justify-content-between align-items-center bg-success white-text">
+                          Bord 7 <span class="p">Ledigt</span>
+                        <span class="badge bg-primary">4 platser</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center bg-success white-text">
+                          Bord 8 <span class="p">Ledigt</span>
+                          <span class="badge bg-primary">4 platser</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center bg-success white-text">
+                            Bord 9 <span class="p">Ledigt</span>
+                          <span class="badge bg-primary">4 platser</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center bg-success white-text">
+                          Bord 10 <span class="p">Ledigt</span>
+                        <span class="badge bg-primary">4 platser</span>
+                        </li>
+                      </ul>
+
+                      <ul class="list-group resturant-right-wall">
+                        <li class="list-group-item d-flex justify-content-between align-items-center bg-success white-text">
+                          Bord 16 <span class="p">Ledigt</span>
+                        <span class="badge bg-primary">2 platser</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center bg-success white-text">
+                          Bord 15 <span class="p">Ledigt</span>
+                          <span class="badge bg-primary">2 platser</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center bg-success white-text">
+                            Bord 14 <span class="p">Ledigt</span>
+                          <span class="badge bg-primary">2 platser</span>
+                       
+                      </ul>
+
+                  <div class="ko-form">
+                    <h2>Ställ i kö</h2>
+                    <div class="form-group">
+                      <input type="text" id="name" class="form-control mb-2" placeholder="Namn på gäst">
+                      <input type="text" id="bord" class="form-control" placeholder="Personer">
+                    </div>
+
+                    <button id="addBtn" class="btn btn-primary">Add</button>
+
+                    <ul id="ko" class="list-group">
+
+                    </ul>
+
+                  </div>
+            
+    </main>
+
+ 
+</body>
+</html>
